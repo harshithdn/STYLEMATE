@@ -1,0 +1,33 @@
+# Secrets & local config
+.env
+.env.*
+!.env.example
+appsettings.*.local.json
+*.pfx
+*.key
+
+# Local data (dev storage, mail, uploads)
+.data/
+
+# .NET
+bin/
+obj/
+*.user
+.vs/
+TestResults/
+*.trx
+coverage*/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+playwright-report/
+test-results/
+blob-report/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/

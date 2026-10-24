@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/StyleMate.Api/StyleMate.Api.csproj" />
+    <Project Path="src/StyleMate.Application/StyleMate.Application.csproj" />
+    <Project Path="src/StyleMate.Domain/StyleMate.Domain.csproj" />
+    <Project Path="src/StyleMate.Infrastructure/StyleMate.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/StyleMate.Api.Tests/StyleMate.Api.Tests.csproj" />
+    <Project Path="tests/StyleMate.Application.Tests/StyleMate.Application.Tests.csproj" />
+    <Project Path="tests/StyleMate.Architecture.Tests/StyleMate.Architecture.Tests.csproj" />
+    <Project Path="tests/StyleMate.Domain.Tests/StyleMate.Domain.Tests.csproj" />
+    <Project Path="tests/StyleMate.Infrastructure.Tests/StyleMate.Infrastructure.Tests.csproj" />
+    <Project Path="tests/StyleMate.TestSupport/StyleMate.TestSupport.csproj" />
+  </Folder>
+</Solution>

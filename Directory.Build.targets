@@ -1,0 +1,14 @@
+<Project>
+  <!--
+    SkiaSharp ships native binaries (and ~90 MB debug symbols each) for many platforms. We only run on win-x64
+    (local development) and linux-x64 (containers/CI), so other platforms and native .pdb files are not copied to
+    build output. This keeps each test project's bin folder small.
+  -->
+  <Target Name="TrimNativeAssets" AfterTargets="ResolvePackageAssets">
+    <ItemGroup>
+      <RuntimeTargetsCopyLocalItems Remove="@(RuntimeTargetsCopyLocalItems)"
+        Condition="'%(Extension)' == '.pdb' Or ('%(RuntimeTargetsCopyLocalItems.RuntimeIdentifier)' != '' And '%(RuntimeTargetsCopyLocalItems.RuntimeIdentifier)' != 'win-x64' And '%(RuntimeTargetsCopyLocalItems.RuntimeIdentifier)' != 'linux-x64')" />
+      <NativeCopyLocalItems Remove="@(NativeCopyLocalItems)" Condition="'%(Extension)' == '.pdb'" />
+    </ItemGroup>
+  </Target>
+</Project>
